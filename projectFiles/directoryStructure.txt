@@ -1,0 +1,18 @@
+uos-cyber-assignment1/
+├── README.md
+├── docker-compose.yml
+├── attacker/
+│   └── Dockerfile
+├── target/
+│   ├── Dockerfile
+│   └── entrypoint.sh
+├── payload/
+│   ├── encrypter.py
+│   └── extractor.py
+├── docs/
+│   ├── methodology.md
+│   ├── walkthrough.md
+│   └── mitigation.md
+├── screenshots/
+│   └── (your evidence)
+└── .gitignore

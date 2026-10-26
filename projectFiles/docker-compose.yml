@@ -1,0 +1,30 @@
+services:
+  target:
+    build: ./target
+    container_name: target
+    hostname: target
+    networks:
+      cyber-lab:
+        ipv4_address: 172.23.0.2
+    tty: true
+    stdin_open: true
+
+  attacker:
+    build: ./attacker
+    container_name: attacker
+    hostname: attacker
+    networks:
+      cyber-lab:
+        ipv4_address: 172.23.0.3
+    depends_on:
+      - target
+    tty: true
+    stdin_open: true
+
+networks:
+  cyber-lab:
+    name: cyber-lab
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.23.0.0/24

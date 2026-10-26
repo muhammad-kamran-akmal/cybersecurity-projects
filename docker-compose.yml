@@ -1,0 +1,23 @@
+services:
+  attacker:
+    image: kalilinux/kali-rolling
+    container_name: attacker
+    tty: true
+    stdin_open: true
+    command: ["sleep", "infinity"]
+    networks:
+      - lab-network
+
+  target:
+    image: debian:bookworm-slim
+    container_name: target
+    tty: true
+    stdin_open: true
+    command: ["sleep", "infinity"]
+    networks:
+      - lab-network
+
+networks:
+  lab-network:
+    name: lab-network
+    driver: bridge

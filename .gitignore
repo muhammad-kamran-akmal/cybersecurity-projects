@@ -1,0 +1,14 @@
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# IDE and Editor artifacts
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Docker local logs
+*.log
+.agent
+*.agent
